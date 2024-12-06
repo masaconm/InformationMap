@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Information Map</title>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=[***************]&callback=initMap"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Information Map</h1>
+    </header>
+    <div id="container">
+      <!-- サイドバー -->
+      <div class="sidebar">
+        <div id="tabs">
+          <div class="button-wrapper">
+            <button class="tab-btn active" onclick="switchTab('category1')">
+              <img
+                class="info-icon"
+                src="img/caution-icon.png"
+                alt="危険"
+              />地域の不審者情報
+            </button>
+          </div>
+          <div class="button-wrapper">
+            <button class="tab-btn" onclick="switchTab('category2')">
+              <img
+                class="info-icon"
+                src="img/animal-icon.png"
+                alt="危険"
+              />野生動物出没情報
+            </button>
+          </div>
+        </div>
+        <div id="category1" class="list-category"></div>
+        <div id="category2" class="list-category" style="display: none"></div>
+      </div>
+      <!-- 地図表示部分 -->
+      <div id="map"></div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
